@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+
+ 
+ 
+ 
+
+		 
+		     <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+		 
+	
+	
+   <link rel="icon" type="image/gif/png"
+	href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Map-circle-grey.svg/768px-Map-circle-grey.svg.png" />
+    <title>Login | RAIL Assist</title>
+    
+    <style>
+    
+ 
+
+body, html {
+	background:black;
+}
+
+
+#title{
+color:white;
+}
+    </style>
+</head>
+<body id="particles-js"  >
+   
+<div class="container">
+     <div   style="  position: fixed; margin-top: 8%;">  <h3 id="title"></h3>
+</div>
+    <div class="row" >
+	
+                <div class="col-sm-4">
+
+                </div>
+
+        <div class="col-sm-4" id="login-box">
+            
+<div class="w3-card" style="position:fixed;background-color:white; margin-top: 12%;min-width: 25%;">
+
+            <div class="w3-panel " style="background-color:#607D8B; margin-top: 0px !important;">
+                <h2 style="color:white;">Login</h2>
+            </div>
+
+            <form th:action="@{/login}" method="post" style="padding-right:20px;padding-left:20px;padding-bottom:25px;">
+                <div class="form-group">
+                    <label for="email">Mail ID:</label>
+                    <input  placeholder="Mail ID" type="text" class="form-control" id="email" name="userName"/>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input placeholder="Password" type="password" class="form-control" id="pwd" name="password"/>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button><br/><br/>
+<!--                 <a href="https://www.google.co.in" class="small" >Forgot password?</a>
+ -->                <hr/>
+                <a th:href="@{/registerUser}" class="small" >Not a user? Click here to register</a><!-- th:href="@{/registerUser}" -->
+                
+            </form>
+
+        </div>
+
+        </div>
+
+        <div class="col-sm-4"></div>
+
+</div>
+</div>
+
+
+</body>
+</html>
